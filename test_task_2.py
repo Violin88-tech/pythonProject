@@ -1,9 +1,9 @@
-from distutils.command.config import config
+
 
 import pytest
 import selene
 from selene import be, have
-from selene import browser
+
 
 
 
@@ -24,5 +24,7 @@ def test_no_result(window):
     selene.browser.open('https://google.com')
     selene.browser.element('[name="q"]').should(be.blank).type('qaswdefrgtyhujk').press_enter()
     selene.browser.element('[class="card-section"]').should(have.text('По запросу qaswdefrgtyhujk ничего не найдено'))
+
+
 
 
